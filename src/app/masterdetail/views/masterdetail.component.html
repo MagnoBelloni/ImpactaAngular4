@@ -1,0 +1,44 @@
+<div class="container margem">
+    <h1>MASTER / DETAIL</h1>
+    <hr/>
+    <div class="row">
+
+
+        <!-- incluindo evento click na lista -->
+        <div  class="col-sm-12 col-md-6 ml-0">
+            <ul class="list-group">
+                <li *ngFor="let item of listaCursos" (click)="selecionar(item)"  class="list-group-item">
+                    <a [routerLink]="['/masterdetail']">{{item.titulo}}</a>
+                    <span class="badge badge-pill ml-2 float-right" [class.badge-primary]="item === cursoSelecionado" [class.badge-dark]="item !== cursoSelecionado"> {{item.codigo}}</span>
+                </li>
+            </ul>
+
+            <button type="button" (click)="novo()" class="mt-3 btn btn-info">
+                Novo<span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div> 
+
+        <!-- incluindo o formulario -->
+        <div *ngIf="cursoSelecionado" class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="codigo">Código:</label>
+                <input type="text" [(ngModel)]="cursoSelecionado.codigo" class="form-control" id="codigo" name="codigo">
+            </div>
+            <div class="form-group">
+                <label for="titulo">titulo:</label>
+                <input type="text" [(ngModel)]="cursoSelecionado.titulo" class="form-control" id="titulo" name="titulo" placeholder="Titulo">
+            </div>
+            <div class="form-group">
+                <label for="ch">Carga horária:</label>
+                <input type="number" [(ngModel)]="cursoSelecionado.ch"  class="form-control" id="ch" name="ch">
+            </div>
+
+            <div class="form-group">
+                <button type="button" (click)="incluir(cursoSelecionado)"  class="btn btn-success">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    Incluir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

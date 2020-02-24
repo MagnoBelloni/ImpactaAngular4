@@ -2,9 +2,15 @@
     <h1 class="pl-4">Listagem de Cursos</h1>
     <div class="row">
         <div class="card col-sm-10 col-lg-3 m-5" *ngFor="let curso of listaCursos">
-            <img class="card-img-top" width="18rem;" src="{{curso.img}}a{{curso.codigo}}?set=set5" alt="imagem" title="Imagem do {{curso.titulo}}">
+            <img class="card-img-top" width="18rem;" src="{{apiLink}}a{{curso.codigo}}?set=set5" alt="imagem" title="Imagem do {{curso.titulo}}">
             <div class="card-body">        
-                <h3 class="card-title">{{curso.codigo}} - {{curso.titulo}}</h3>
+                <h3 class="card-title">
+                    {{curso.codigo}} - {{curso.titulo | uppercase}} 
+                    <span class="float-right">
+                        <span class="badge badge-primary badge-pill ml-2"> {{curso.ch}}</span>
+                    </span>
+                </h3>
+                
                 <b>Carga Horária: {{curso.ch}}</b>
                 <p class="card-text">{{curso.descricao}}</p>
                 <a class="btn btn-dark text-white" title="Non funziona ancora">Pulsante</a>

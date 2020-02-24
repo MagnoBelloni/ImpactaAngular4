@@ -1,11 +1,34 @@
 import {Component} from '@angular/core';
+import { ICard } from '../classes/interface.card';
 
 @Component({
-    template: `
-                <div class="container margem">
-                    <h1>Pagina Inicial</h1>
-                </div>
-              `
+    moduleId: module.id,
+    templateUrl: 'views/logo.component.html'
 })
 
-export class LogoComponent{}
+export class LogoComponent{
+    linkApi: string = "https://robohash.org/";
+
+    listaCard: ICard[] = [
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+        {titulo: 'sla mano', descricao: 'Silvio Santos Ipsum Um, dois três, quatro, PIM, entendeuam? Ma vale dérreaisam? Eu só acreditoammmm.... Vendoammmm. Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? É dinheiro ou não éam? É por sua conta e riscoamm?'},
+    ];
+}

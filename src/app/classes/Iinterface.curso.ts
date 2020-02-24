@@ -3,5 +3,4 @@ export interface ICurso{
     titulo: string;
     descricao: string;
     ch: number;
-    img: string;
 }
