@@ -7,6 +7,7 @@ import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { verificaChFilter } from './filters/verificarch.filter';
+import { SublistaFilter } from './filters/sublista.filter';
 
 import { LogoComponent } from './logo/logo.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -19,6 +20,7 @@ import { CursosService } from './services/cursos.service';
 
 
 
+
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   declarations: [AppComponent,
@@ -28,7 +30,8 @@ import { CursosService } from './services/cursos.service';
     NotFoundComponent,
     ListaComponent,
     MasterDetailComponent,
-    verificaChFilter
+    verificaChFilter,
+    SublistaFilter
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
