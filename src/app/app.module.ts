@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { HttpModule } from '@angular/http';
+
 import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -22,7 +24,8 @@ import { CursosService } from './services/cursos.service';
 
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, 
+            HttpModule],
   declarations: [AppComponent,
     MenuComponent,
     LogoComponent,
@@ -32,6 +35,7 @@ import { CursosService } from './services/cursos.service';
     MasterDetailComponent,
     verificaChFilter,
     SublistaFilter
+    
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]

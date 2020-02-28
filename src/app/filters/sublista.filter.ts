@@ -9,7 +9,7 @@ export class SublistaFilter implements PipeTransform {
 
     transform(cursos: ICurso[], input: string) : ICurso[] {
         
-        return cursos.filter(curso => curso.titulo.toLowerCase().includes(input.toLowerCase()));
+        return cursos.filter(curso => curso.descricao.toLowerCase().includes(input.toLowerCase()));
     }
 
 }

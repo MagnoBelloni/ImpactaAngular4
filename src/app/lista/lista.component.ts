@@ -11,8 +11,18 @@ export class ListaComponent {
     apiLink: string = "https://robohash.org/";
     public listaCursos: ICurso[];
 
-    constructor(cursosService: CursosService){
-        this.listaCursos = cursosService.getListaCursos();
+    constructor(private cursosService: CursosService){
+       this.listar();
+    }
+
+    public listar(): void {
+        this.cursosService.getCursos()
+            .subscribe(res => {
+                this.listaCursos = res;
+                console.log(this.listaCursos);
+            },
+                error => alert(error),
+                () => console.log('finalizado'));
     }
 
 }

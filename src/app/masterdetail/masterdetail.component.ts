@@ -7,31 +7,50 @@ import { ICurso } from '../classes/Iinterface.curso';
     templateUrl: './views/masterdetail.component.html'
 })
 
-export class MasterDetailComponent{
+export class MasterDetailComponent {
 
 
     public listaCursos: ICurso[];
     public cursoSelecionado: ICurso;
     private novoCurso: ICurso;
 
-    constructor(cursosService: CursosService){
-        this.listaCursos = cursosService.getListaCursos();
+    constructor(private cursosService: CursosService) {
+        this.listar();
     }
-    
+
+    public listar(): void {
+        this.cursosService.getCursos()
+            .subscribe(res => {
+                this.listaCursos = res;
+                console.log(this.listaCursos);
+            },
+                error => alert(error),
+                () => console.log('finalizado'));
+    }
+
     //para a inclusão de um novo curso
-    public novo(): void{
-        this.novoCurso = {codigo: 0, titulo: '', descricao: '', ch: 0}
+    public novo(): void {
+        this.novoCurso = { codigo: 0, descricao: '', ch: 0 }
         this.cursoSelecionado = this.novoCurso;
     }
 
-    public incluir(curso: ICurso) : void{
-        this.listaCursos.push(curso);
-        alert('Curso incluído com sucesso');
+    public incluir(curso: ICurso): void {
+        curso.descricao = curso.descricao[0].toUpperCase() + curso.descricao.substring(1).toLowerCase();
+        this.cursosService.setCurso(curso)
+            .subscribe(res => {
+                JSON.stringify(res);
+                alert('Curso incluído com sucesso');
+            },
+                error => alert(error),
+                () =>  this.listar()
+            );
+
+        
     }
 
-    public selecionar(item: ICurso): void{
+    public selecionar(item: ICurso): void {
         this.cursoSelecionado = item;
     }
 
-    
+
 }
